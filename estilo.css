@@ -213,7 +213,6 @@ body {
     }
     
     .info-contacto {
-        flex-direction: column;
         gap: 10px;
     }
 }
