@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primario: #e83e8c;
+    --color-secundario: #6f42c1;
+    --color-terciario: #20c997;
+    --color-texto: #333;
+    --color-fondo: #f8f9fa;
+    --color-blanco: #fff;
+    --color-negro: #000;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.3s ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+header {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--sombra);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-blanco);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.eslogan {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    letter-spacing: 1.5px;
+}
+
+.eslogan2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 15px auto 0;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.boton-volver {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.2em;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: var(--transicion);
+}
+
+.boton-volver:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categoria {
+    background: var(--color-blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+    width: 350px;
+    position: relative;
+}
+
+.categoria:hover {
+    transform: translateY(-10px);
+}
+
+.categoria img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transicion);
+}
+
+.categoria:hover img {
+    transform: scale(1.05);
+}
+
+.categoria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: var(--color-blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+.categoria-overlay h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.categoria-overlay p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.contacto-fijo {
+    background: linear-gradient(135deg, var(--color-secundario), var(--color-primario));
+    color: var(--color-blanco);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info-contacto h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-blanco);
+}
+
+.info-contacto p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.info-contacto a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.redes-sociales a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 5px;
+    transition: var(--transicion);
+}
+
+.redes-sociales a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+body {
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .eslogan {
+        font-size: 1.2rem;
+    }
+    
+    .categoria {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .info-contacto {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
