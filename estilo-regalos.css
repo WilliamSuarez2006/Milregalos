@@ -106,22 +106,21 @@
 
 .cabecera-categoria {
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px 20px; /* Reducido de 30px 20px */
     background-color: #f8f9fa;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reducido de 30px */
 }
 
 .cabecera-categoria h1 {
-    font-family: 'Playfair Display', serif;
-    color: #2c3e50;
-    margin-bottom: 15px;
+    font-size: 2rem; /* Añade esto si quieres reducir el tamaño */
+    margin-bottom: 10px; /* Reducido de 15px */
 }
 
 .cabecera-categoria p {
     max-width: 700px;
     margin: 0 auto;
     color: #7f8c8d;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {

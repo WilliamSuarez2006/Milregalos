@@ -24,7 +24,7 @@ body {
 header {
     background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
     color: var(--color-blanco);
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
     position: relative;
     box-shadow: var(--sombra);
@@ -33,11 +33,11 @@ header {
 header h1 {
     margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem; /* Reducido de 3.5rem */
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--color-blanco);
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reducido de 15px */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -45,20 +45,20 @@ header h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reducido de 1.5rem */
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px; /* Reducido de 1.5px */
 }
 
 .eslogan2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reducido de 1rem */
     color: rgba(255, 255, 255, 0.9);
-    margin: 15px auto 0;
+    margin: 10px auto 0; /* Reducido de 15px auto 0 */
     max-width: 600px;
-    line-height: 1.5;
+    line-height: 1.4; /* Reducido de 1.5 */
 }
 
 .boton-volver {
@@ -167,7 +167,7 @@ header h1 {
 
 .info-contacto p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.950rem;
 }
 
 .info-contacto a {
@@ -184,7 +184,7 @@ header h1 {
     border-radius: 50%;
     text-align: center;
     line-height: 35px;
-    margin: 0 5px;
+    margin: 0.5px;
     transition: var(--transicion);
 }
 
