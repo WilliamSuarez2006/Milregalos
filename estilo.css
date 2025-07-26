@@ -1,310 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap');
 
 :root {
     --color-primario: #e83e8c;
     --color-secundario: #6f42c1;
-    --color-terciario: #20c997;
     --color-texto: #333;
     --color-fondo: #f8f9fa;
     --color-blanco: #fff;
-    --color-negro: #000;
     --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --transicion: all 0.3s ease;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: var(--color-texto);
     background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
     padding-bottom: 120px;
 }
 
+/* Encabezado estilo imagen */
 header {
     background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
     color: var(--color-blanco);
-    padding: 30px 20px;
+    padding: 20px 15px;
     text-align: center;
-    position: relative;
-    box-shadow: var(--sombra);
+    margin-bottom: 20px;
 }
 
 header h1 {
-    margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--color-blanco);
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.eslogan {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.8rem;
     margin: 0 0 10px 0;
-    letter-spacing: 1px;
+    font-weight: 700;
 }
 
-.eslogan2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+header p {
+    margin: 0;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 10px auto 0;
-    max-width: 600px;
-    line-height: 1.4;
+    opacity: 0.9;
 }
 
-.boton-volver {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-size: 1.2em;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    padding: 8px 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    transition: var(--transicion);
-}
-
-.boton-volver:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
+/* Contenedor principal */
 .menu-catalogo {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 1200px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
+/* Tarjetas de categoría */
 .categoria {
     background: var(--color-blanco);
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--sombra);
-    transition: transform 0.3s;
-    width: 350px;
-    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.categoria:hover {
-    transform: translateY(-10px);
+.categoria a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
 }
 
 .categoria img {
     width: 100%;
-    height: 300px;
+    height: 150px;
     object-fit: cover;
     object-position: center;
-    transition: var(--transicion);
 }
 
-.categoria:hover img {
-    transform: scale(1.05);
-}
-
-.categoria-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: var(--color-blanco);
-    padding: 20px;
+.categoria-info {
+    padding: 15px;
     text-align: center;
 }
 
-.categoria-overlay h2 {
+.categoria-info h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+
+.categoria-info p {
     margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    color: #666;
 }
 
-.categoria-overlay p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
+/* Footer estilo imagen */
 .contacto-fijo {
     background: linear-gradient(135deg, var(--color-secundario), var(--color-primario));
     color: var(--color-blanco);
-    padding: 10px 0;
+    padding: 15px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-.info-contacto {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 .info-contacto h3 {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 1.1rem;
-    color: var(--color-blanco);
 }
 
 .info-contacto p {
-    margin: 0;
-    font-size: 0.95rem;
+    margin: 5px 0;
+    font-size: 0.85rem;
 }
 
-.info-contacto a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    transition: var(--transicion);
-}
-
-.redes-sociales a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 35px;
-    margin: 0.5px;
-    transition: var(--transicion);
-}
-
-.redes-sociales a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
-}
-
-/* Estilos específicos para móviles */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 10px;
+/* Efectos hover solo en desktop */
+@media (hover: hover) {
+    .categoria:hover {
+        transform: translateY(-5px);
     }
-    
+}
+
+/* Ajustes para tablets */
+@media (min-width: 600px) {
     header h1 {
-        font-size: 1.8rem;
-        margin-bottom: 5px;
-    }
-    
-    .eslogan {
-        font-size: 1rem;
-        margin-bottom: 5px;
-    }
-    
-    .eslogan2 {
-        font-size: 0.8rem;
-        line-height: 1.3;
+        font-size: 2.2rem;
     }
     
     .menu-catalogo {
-        padding: 15px 10px;
-        gap: 12px;
-    }
-    
-    .categoria {
-        width: 100%;
-        margin-bottom: 12px;
-        max-width: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
     }
     
     .categoria img {
         height: 180px;
     }
-    
-    .categoria-overlay {
-        padding: 15px;
-    }
-    
-    .categoria-overlay h2 {
-        font-size: 1.3rem;
-    }
-    
-    .categoria-overlay p {
-        font-size: 0.8rem;
-        margin-top: 3px;
-    }
-    
-    .boton-volver {
-        font-size: 1rem;
-        padding: 5px 10px;
-        top: 12px;
-        left: 10px;
-    }
-    
-    .cabecera-categoria {
-        padding: 15px 10px;
-    }
-    
-    .cabecera-categoria h1 {
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-    
-    .cabecera-categoria p {
-        font-size: 0.9rem;
-    }
-    
-    .contacto-fijo {
-        padding: 8px 0;
-    }
-    
-    .info-contacto {
-        flex-direction: column;
-        gap: 5px;
-        padding: 5px;
-    }
-    
-    .info-contacto p {
-        font-size: 0.8rem;
-    }
-    
-    body {
-        padding-bottom: 120px;
-    }
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
+/* Ajustes para desktop */
+@media (min-width: 900px) {
+    .menu-catalogo {
+        grid-template-columns: repeat(3, 1fr);
     }
     
-    .eslogan {
-        font-size: 0.9rem;
-    }
-    
-    .eslogan2 {
-        font-size: 0.75rem;
-    }
-    
-    .categoria-overlay h2 {
-        font-size: 1.1rem;
-    }
-    
-    .categoria-overlay p {
-        font-size: 0.7rem;
+    .categoria img {
+        height: 200px;
     }
 }
